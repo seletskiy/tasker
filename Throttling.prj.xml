@@ -1,0 +1,491 @@
+<TaskerData sr="" dvi="1" tv="4.8u1m">
+	<Profile sr="prof18" ve="2">
+		<cdate>1455429539772</cdate>
+		<clp>true</clp>
+		<edate>1461139795930</edate>
+		<id>18</id>
+		<mid0>19</mid0>
+		<nme>Enable Throttling On Lock</nme>
+		<Event sr="con0" ve="2">
+			<code>3060</code>
+			<pri>0</pri>
+			<Str sr="arg0" ve="3">%UNLOCKED</Str>
+			<Int sr="arg1" val="0"/>
+		</Event>
+	</Profile>
+	<Profile sr="prof26" ve="2">
+		<cdate>1455137600369</cdate>
+		<clp>true</clp>
+		<edate>1461138641886</edate>
+		<id>26</id>
+		<limit>true</limit>
+		<mid0>27</mid0>
+		<nme>Throttle Mobile 7 min¹</nme>
+		<State sr="con0" ve="2">
+			<code>165</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%UNLOCKED</lhs>
+					<op>13</op>
+					<rhs></rhs>
+				</Condition>
+			</ConditionList>
+		</State>
+		<Time sr="con1">
+			<fh>7</fh>
+			<fm>0</fm>
+			<rep>2</rep>
+			<repval>7</repval>
+			<th>0</th>
+			<tm>0</tm>
+		</Time>
+		<State sr="con2" ve="2">
+			<code>165</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%THROTTLE</lhs>
+					<op>12</op>
+					<rhs></rhs>
+				</Condition>
+			</ConditionList>
+		</State>
+	</Profile>
+	<Profile sr="prof28" ve="2">
+		<cdate>1455140303718</cdate>
+		<clp>true</clp>
+		<edate>1461138666868</edate>
+		<id>28</id>
+		<mid0>29</mid0>
+		<nme>Disable Throttling On Unlock</nme>
+		<pri>10</pri>
+		<Event sr="con0" ve="2">
+			<code>3050</code>
+			<pri>0</pri>
+			<Str sr="arg0" ve="3">%UNLOCKED</Str>
+			<Str sr="arg1" ve="3"/>
+			<Int sr="arg2" val="0"/>
+		</Event>
+	</Profile>
+	<Profile sr="prof30" ve="2">
+		<cdate>1455137600369</cdate>
+		<clp>true</clp>
+		<edate>1461138638206</edate>
+		<id>30</id>
+		<mid0>27</mid0>
+		<nme>Throttle Mobile, 60min¹ (night)</nme>
+		<State sr="con0" ve="2">
+			<code>165</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%UNLOCKED</lhs>
+					<op>13</op>
+					<rhs></rhs>
+				</Condition>
+			</ConditionList>
+		</State>
+		<Time sr="con1">
+			<fh>1</fh>
+			<fm>1</fm>
+			<rep>1</rep>
+			<repval>1</repval>
+			<th>6</th>
+			<tm>59</tm>
+		</Time>
+		<State sr="con2" ve="2">
+			<code>165</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%THROTTLE</lhs>
+					<op>12</op>
+					<rhs></rhs>
+				</Condition>
+			</ConditionList>
+		</State>
+	</Profile>
+	<Profile sr="prof44" ve="2">
+		<cdate>1461138689351</cdate>
+		<clp>true</clp>
+		<edate>1461727274549</edate>
+		<id>44</id>
+		<mid0>52</mid0>
+		<mid1>59</mid1>
+		<nme>Update Status Bar</nme>
+		<State sr="con0" ve="2">
+			<code>165</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%THROTTLE</lhs>
+					<op>12</op>
+					<rhs></rhs>
+				</Condition>
+			</ConditionList>
+		</State>
+	</Profile>
+	<Profile sr="prof56" ve="2">
+		<cdate>1455429539772</cdate>
+		<clp>true</clp>
+		<edate>1461140121623</edate>
+		<id>56</id>
+		<limit>true</limit>
+		<mid0>47</mid0>
+		<nme>Disable Internet On Throttle</nme>
+		<Event sr="con0" ve="2">
+			<code>3050</code>
+			<pri>0</pri>
+			<Str sr="arg0" ve="3">%THROTTLE</Str>
+			<Str sr="arg1" ve="3"/>
+			<Int sr="arg2" val="0"/>
+		</Event>
+	</Profile>
+	<Project sr="proj0" ve="2">
+		<cdate>1457347285214</cdate>
+		<name>Throttling</name>
+		<pids>18,30,28,44,26,56</pids>
+		<tids>59,27,47,33,50,32,29,19,52,31</tids>
+	</Project>
+	<Task sr="task19">
+		<cdate>1455429558129</cdate>
+		<edate>1461139795930</edate>
+		<id>19</id>
+		<nme>Enable Mobile Data Throttle</nme>
+		<Action sr="act0" ve="7">
+			<code>30</code>
+			<Int sr="arg0" val="0"/>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="3"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%THROTTLE</Str>
+			<Str sr="arg1" ve="3">1</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+		</Action>
+	</Task>
+	<Task sr="task27">
+		<cdate>1455137628087</cdate>
+		<edate>1460614461639</edate>
+		<id>27</id>
+		<nme>Throttle Mobile</nme>
+		<pri>100</pri>
+		<Action sr="act0" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">Switch On Internet</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>30</code>
+			<Int sr="arg0" val="0"/>
+			<Int sr="arg1" val="15"/>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">Switch Off Internet</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%UNLOCKED</lhs>
+					<op>13</op>
+					<rhs></rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+	</Task>
+	<Task sr="task29">
+		<cdate>1455140313777</cdate>
+		<edate>1461138666868</edate>
+		<id>29</id>
+		<nme>Reset Throttle</nme>
+		<Action sr="act0" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0"/>
+			<Str sr="arg1" ve="3">Enable Mobile Data Throttle</Str>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%THROTTLE</lhs>
+					<op>12</op>
+					<rhs></rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%THROTTLE</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">Switch On Internet</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>38</code>
+		</Action>
+	</Task>
+	<Task sr="task31">
+		<cdate>1455264231306</cdate>
+		<edate>1460614497743</edate>
+		<id>31</id>
+		<nme>Enable Mobile Data</nme>
+		<Action sr="act0" ve="7">
+			<code>8279</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<action>action_name_switch_on</action>
+					<action-type>java.lang.String</action-type>
+					<com.twofortyfouram.locale.intent.extra.BLURB>switch on</com.twofortyfouram.locale.intent.extra.BLURB>
+					<com.twofortyfouram.locale.intent.extra.BLURB-type>java.lang.String</com.twofortyfouram.locale.intent.extra.BLURB-type>
+					<net.dinglisch.android.tasker.subbundled>true</net.dinglisch.android.tasker.subbundled>
+					<net.dinglisch.android.tasker.subbundled-type>java.lang.Boolean</net.dinglisch.android.tasker.subbundled-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">com.cygery.toggledata.xda</Str>
+			<Str sr="arg2" ve="3">Toggle Data 5.0</Str>
+			<Int sr="arg3" val="0"/>
+		</Action>
+	</Task>
+	<Task sr="task32">
+		<cdate>1457370264456</cdate>
+		<edate>1460614479515</edate>
+		<id>32</id>
+		<nme>Switch On Internet</nme>
+		<pri>100</pri>
+		<Action sr="act0" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%PREVWIFI</lhs>
+					<op>0</op>
+					<rhs>on</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>425</code>
+			<Int sr="arg0" val="1"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>43</code>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>8279</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<action>action_name_switch_on</action>
+					<action-type>java.lang.String</action-type>
+					<com.twofortyfouram.locale.intent.extra.BLURB>switch on</com.twofortyfouram.locale.intent.extra.BLURB>
+					<com.twofortyfouram.locale.intent.extra.BLURB-type>java.lang.String</com.twofortyfouram.locale.intent.extra.BLURB-type>
+					<net.dinglisch.android.tasker.subbundled>true</net.dinglisch.android.tasker.subbundled>
+					<net.dinglisch.android.tasker.subbundled-type>java.lang.Boolean</net.dinglisch.android.tasker.subbundled-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">com.cygery.toggledata.xda</Str>
+			<Str sr="arg2" ve="3">Toggle Data 5.0</Str>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>38</code>
+		</Action>
+	</Task>
+	<Task sr="task33">
+		<cdate>1457370322324</cdate>
+		<edate>1461138739380</edate>
+		<id>33</id>
+		<nme>Switch Off Internet</nme>
+		<pri>100</pri>
+		<Action sr="act0" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%PREVWIFI</lhs>
+					<op>0</op>
+					<rhs>on</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>425</code>
+			<Int sr="arg0" val="0"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>43</code>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>8279</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<action>action_name_switch_off</action>
+					<action-type>java.lang.String</action-type>
+					<com.twofortyfouram.locale.intent.extra.BLURB>switch off</com.twofortyfouram.locale.intent.extra.BLURB>
+					<com.twofortyfouram.locale.intent.extra.BLURB-type>java.lang.String</com.twofortyfouram.locale.intent.extra.BLURB-type>
+					<net.dinglisch.android.tasker.subbundled>true</net.dinglisch.android.tasker.subbundled>
+					<net.dinglisch.android.tasker.subbundled-type>java.lang.Boolean</net.dinglisch.android.tasker.subbundled-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">com.cygery.toggledata.xda</Str>
+			<Str sr="arg2" ve="3">Toggle Data 5.0</Str>
+			<Int sr="arg3" val="20"/>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>38</code>
+		</Action>
+	</Task>
+	<Task sr="task47">
+		<cdate>1461138727174</cdate>
+		<edate>1461138852962</edate>
+		<id>47</id>
+		<nme>Unconditionally Switch Off Internet</nme>
+		<Action sr="act0" ve="7">
+			<code>8279</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<action>action_name_switch_off</action>
+					<action-type>java.lang.String</action-type>
+					<com.twofortyfouram.locale.intent.extra.BLURB>switch off</com.twofortyfouram.locale.intent.extra.BLURB>
+					<com.twofortyfouram.locale.intent.extra.BLURB-type>java.lang.String</com.twofortyfouram.locale.intent.extra.BLURB-type>
+					<net.dinglisch.android.tasker.subbundled>true</net.dinglisch.android.tasker.subbundled>
+					<net.dinglisch.android.tasker.subbundled-type>java.lang.Boolean</net.dinglisch.android.tasker.subbundled-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">com.cygery.toggledata.xda</Str>
+			<Str sr="arg2" ve="3">Toggle Data 5.0</Str>
+			<Int sr="arg3" val="20"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%PREVWIFI</Str>
+			<Str sr="arg1" ve="3">%WIFI</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>425</code>
+			<Int sr="arg0" val="0"/>
+		</Action>
+	</Task>
+	<Task sr="task50">
+		<cdate>1461078765711</cdate>
+		<edate>1461151659999</edate>
+		<id>50</id>
+		<nme>Update Status</nme>
+		<Action sr="act0" ve="7">
+			<code>779</code>
+			<Str sr="arg0" ve="3"/>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%STATUS</Str>
+			<Str sr="arg1" ve="3">%STATUS_VOLUME</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%STATUS</Str>
+			<Str sr="arg1" ve="3"> × %STATUS_THROTTLING</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="1"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%STATUS_THROTTLING</lhs>
+					<op>12</op>
+					<rhs></rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%STATUS</Str>
+			<Str sr="arg1" ve="3"> × %STATUS_POCKET</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="1"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%STATUS_POCKET</lhs>
+					<op>12</op>
+					<rhs></rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>523</code>
+			<Str sr="arg0" ve="3">%STATUS</Str>
+			<Str sr="arg1" ve="3"/>
+			<Img sr="arg2" ve="2">
+				<nme>hd_aaa_ext_overflow</nme>
+			</Img>
+			<Int sr="arg3" val="1"/>
+			<Int sr="arg4" val="1"/>
+			<Int sr="arg5" val="5"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%UNLOCKED</lhs>
+					<op>13</op>
+					<rhs></rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+	</Task>
+	<Task sr="task52">
+		<cdate>1461138877421</cdate>
+		<edate>1461727274549</edate>
+		<id>52</id>
+		<nme>Add Throttling To Status Bar</nme>
+		<Action sr="act0" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%STATUS_THROTTLING</Str>
+			<Str sr="arg1" ve="3">¦|¦</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="1"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">Update Status</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+		</Action>
+	</Task>
+	<Task sr="task59">
+		<cdate>1461141479085</cdate>
+		<edate>1461141488866</edate>
+		<id>59</id>
+		<nme>Remove Throttling From Status Bar</nme>
+		<Action sr="act0" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%STATUS_THROTTLING</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+	</Task>
+</TaskerData>

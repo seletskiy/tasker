@@ -1,0 +1,135 @@
+<TaskerData sr="" dvi="1" tv="4.8u1m">
+	<Profile sr="prof2" ve="2">
+		<cdate>1455020759737</cdate>
+		<clp>true</clp>
+		<edate>1461720413552</edate>
+		<id>2</id>
+		<mid0>3</mid0>
+		<nme>Zabbix Problem</nme>
+		<Event sr="con0" ve="2">
+			<code>7</code>
+			<pri>0</pri>
+			<Int sr="arg0" val="2"/>
+			<Str sr="arg1" ve="3"/>
+			<Str sr="arg2" ve="3">*[PROBLEM]*</Str>
+		</Event>
+	</Profile>
+	<Profile sr="prof37" ve="2">
+		<cdate>1455020759737</cdate>
+		<clp>true</clp>
+		<edate>1461720414870</edate>
+		<id>37</id>
+		<mid0>38</mid0>
+		<nme>Zabbix Nack</nme>
+		<Event sr="con0" ve="2">
+			<code>7</code>
+			<pri>0</pri>
+			<Int sr="arg0" val="2"/>
+			<Str sr="arg1" ve="3"/>
+			<Str sr="arg2" ve="3">*[NACK]*</Str>
+		</Event>
+	</Profile>
+	<Profile sr="prof4" ve="2">
+		<cdate>1455021567771</cdate>
+		<clp>true</clp>
+		<edate>1461720413167</edate>
+		<id>4</id>
+		<mid0>5</mid0>
+		<nme>Zabbix OK</nme>
+		<Event sr="con0" ve="2">
+			<code>7</code>
+			<pri>0</pri>
+			<Int sr="arg0" val="2"/>
+			<Str sr="arg1" ve="3"/>
+			<Str sr="arg2" ve="3">*[OK]*</Str>
+		</Event>
+	</Profile>
+	<Profile sr="prof53" ve="2">
+		<cdate>1455020759737</cdate>
+		<clp>true</clp>
+		<edate>1461720413973</edate>
+		<id>53</id>
+		<mid0>3</mid0>
+		<nme>Pingdom Notification</nme>
+		<Event sr="con0" ve="2">
+			<code>7</code>
+			<pri>0</pri>
+			<Int sr="arg0" val="2"/>
+			<Str sr="arg1" ve="3"/>
+			<Str sr="arg2" ve="3">*PingdomAlert*notification.</Str>
+		</Event>
+	</Profile>
+	<Profile sr="prof54" ve="2">
+		<cdate>1455021567771</cdate>
+		<clp>true</clp>
+		<edate>1461720414518</edate>
+		<id>54</id>
+		<mid0>5</mid0>
+		<nme>Pingdom Incident Closed</nme>
+		<Event sr="con0" ve="2">
+			<code>7</code>
+			<pri>0</pri>
+			<Int sr="arg0" val="2"/>
+			<Str sr="arg1" ve="3"/>
+			<Str sr="arg2" ve="3">*PingdomAlert*incident has been closed.</Str>
+		</Event>
+	</Profile>
+	<Project sr="proj0" ve="2">
+		<cdate>1455259883958</cdate>
+		<name>Mon</name>
+		<pids>53,4,37,2,54</pids>
+		<tids>38,5,3</tids>
+	</Project>
+	<Task sr="task3">
+		<cdate>1455020810820</cdate>
+		<edate>1461571211059</edate>
+		<id>3</id>
+		<nme>Play Problem Sound</nme>
+		<pri>100</pri>
+		<Action sr="act0" ve="7">
+			<code>192</code>
+			<Int sr="arg0" val="1"/>
+			<Str sr="arg1" ve="3">46150 SFX - Computer Beep Warning</Str>
+			<Int sr="arg2" val="4"/>
+			<ConditionList sr="if">
+				<bool0>And</bool0>
+				<Condition sr="c0" ve="3">
+					<lhs>%SMSRB</lhs>
+					<op>3</op>
+					<rhs>*RUgion*</rhs>
+				</Condition>
+				<Condition sr="c1" ve="3">
+					<lhs>%SMSRB</lhs>
+					<op>3</op>
+					<rhs>*Sochi*</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+	</Task>
+	<Task sr="task38">
+		<cdate>1461126154410</cdate>
+		<edate>1461126496424</edate>
+		<id>38</id>
+		<nme>Play Nack Sound</nme>
+		<pri>100</pri>
+		<Action sr="act0" ve="7">
+			<code>192</code>
+			<Int sr="arg0" val="1"/>
+			<Str sr="arg1" ve="3">46305 SFX - Multimedia Beep Musical</Str>
+			<Int sr="arg2" val="4"/>
+		</Action>
+	</Task>
+	<Task sr="task5">
+		<cdate>1455021576195</cdate>
+		<edate>1461126471344</edate>
+		<id>5</id>
+		<nme>Play OK Sound</nme>
+		<pri>100</pri>
+		<Action sr="act0" ve="7">
+			<code>192</code>
+			<Int sr="arg0" val="1"/>
+			<Str sr="arg1" ve="3">45051 SFX - Musical Melody Music Box 1</Str>
+			<Int sr="arg2" val="4"/>
+		</Action>
+	</Task>
+</TaskerData>
